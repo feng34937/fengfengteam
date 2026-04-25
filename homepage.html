@@ -1,3 +1,5 @@
+这是为您更新后的HTML代码。现在点击弹窗中的“铭记于心”按钮会**跳转到您指定的“https://feng34937.github.io/miyuan/homepage”页面**，同时关闭弹窗并保留所有原有功能。
+```html
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -1151,7 +1153,7 @@
             <div class="modal-text">
                 凤峰团队已解散并停止更新，<br>5月1日将停止支持。<br><br>感谢大家一路以来的陪伴与支持！
             </div>
-            <button class="modal-btn" onclick="closeModal()">铭记于心</button>
+            <button class="modal-btn" onclick="redirectToMiyuan()">铭记于心</button>
         </div>
     </div>
 
@@ -1509,6 +1511,12 @@
             }, 300);
         });
         
+        // 跳转到迷渊主页并关闭弹窗
+        function redirectToMiyuan() {
+            window.location.href = 'https://feng34937.github.io/miyuan/homepage';
+        }
+        
+        // 关闭弹窗（保留以防其他地方调用）
         function closeModal() {
             const modal = document.getElementById('dissolutionModal');
             const modalContent = modal.querySelector('.modal-content');
@@ -1735,3 +1743,4 @@
     </script>
 </body>
 </html>
+```
